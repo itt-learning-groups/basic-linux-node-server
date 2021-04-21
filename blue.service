@@ -1,0 +1,11 @@
+[Service]
+ExecStart=/usr/bin/node /home/ec2-user/node-server/index-blue.js
+ExecStop=echo "stopping"
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-server
+User=ec2-user
+
+[Install]
+WantedBy=multi-user.target
